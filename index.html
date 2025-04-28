@@ -31,13 +31,16 @@
     .feed { max-width: 600px; margin: 0 auto 40px; padding: 0 16px; }
     .post { background: #fff; margin-bottom: 16px; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
     .post img { width: 100%; display: block; }
-    .post-content { padding: 12px; position: relative; }
+    .post-content { padding: 12px; }
     .post-title { margin: 0 0 8px; font-size: 1.1rem; }
     .post-text { margin: 0 0 8px; }
     .post-sub { margin: 0 0 8px; font-style: italic; color: #555; }
-    .like-btn { background: none; border: none; font-size: 1.5rem; color: blue; cursor: pointer; position: absolute; top: 12px; right: 12px; }
+    .post-meta { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 8px; }
+    .like-btn { background: none; border: none; font-size: 1.5rem; color: blue; cursor: pointer; }
     .like-btn.liked { color: red; }
-    time { color: #777; font-size: 0.875rem; display: block; margin-top: 8px; }
+    time { color: #777; font-size: 0.875rem; }
+    .comment-area { margin-top: 12px; }
+    .comment-area input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; }
     footer { text-align: center; padding: 16px 0; color: #777; font-size: 0.875rem; }
 
     /* Responsive: mobile adjustments */
@@ -101,8 +104,13 @@
         <h2 class="post-title">Feeding time never looked this good…</h2>
         <p class="post-text">While kitty laps up her dinner, I’m licking my lips behind the glass—can you blame me?</p>
         <p class="post-sub">Subscribe now for uncensored behind-the-scenes clips and intimate Q&amp;As</p>
-        <button class="like-btn">❤</button>
-        <time datetime="2025-04-28">Apr 28, 2025</time>
+        <div class="post-meta">
+          <time datetime="2025-04-28">Apr 28, 2025</time>
+          <button class="like-btn">❤</button>
+        </div>
+        <div class="comment-area">
+          <input type="text" placeholder="Add a comment...">
+        </div>
       </div>
     </article>
 
@@ -112,8 +120,13 @@
         <h2 class="post-title">Caught in the act… just me and kitty, with a bag of her favorite Dreamies treats</h2>
         <p class="post-text">I’ve got my eyes on you—ready to trade cuddles for kisses? Slip under the velvet rope and watch as I turn snack time into a steamy playdate. 🔥😽</p>
         <p class="post-sub">Want more? Hit that subscribe button and unlock the full video of our purr-fectly naughty moment.</p>
-        <button class="like-btn">❤</button>
-        <time datetime="2025-04-27">Apr 27, 2025</time>
+        <div class="post-meta">
+          <time datetime="2025-04-27">Apr 27, 2025</time>
+          <button class="like-btn">❤</button>
+        </div>
+        <div class="comment-area">
+          <input type="text" placeholder="Add a comment...">
+        </div>
       </div>
     </article>
 
@@ -122,8 +135,13 @@
       <div class="post-content">
         <h2 class="post-title">Third post placeholder.</h2>
         <p class="post-text">Feel free to add more.</p>
-        <button class="like-btn">❤</button>
-        <time datetime="2025-04-26">Apr 26, 2025</time>
+        <div class="post-meta">
+          <time datetime="2025-04-26">Apr 26, 2025</time>
+          <button class="like-btn">❤</button>
+        </div>
+        <div class="comment-area">
+          <input type="text" placeholder="Add a comment...">
+        </div>
       </div>
     </article>
   </main>
