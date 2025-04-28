@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Feed Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Profile Header -->
+  <header class="profile-header">
+    <div class="cover-photo">
+      <!-- Placeholder for cover image -->
+      <img src="cover.jpg" alt="Cover Photo">
+    </div>
+    <div class="profile-info">
+      <div class="avatar">
+        <!-- Placeholder for avatar image -->
+        <img src="avatar.jpg" alt="Avatar">
+      </div>
+      <div class="user-details">
+        <h1>CoachNina <span class="verified">✔️</span></h1>
+        <p class="username">@coachnina</p>
+        <p class="bio">Trainer, adventurer, and here to inspire...</p>
+      </div>
+      <button class="subscribe-btn">SUBSCRIBE FOR FREE</button>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <strong>1K</strong>
+        <span>Posts</span>
+      </div>
+      <div class="stat-item">
+        <strong>265K</strong>
+        <span>Followers</span>
+      </div>
+      <div class="stat-item">
+        <strong>1K</strong>
+        <span>Following</span>
+      </div>
+    </div>
+    <nav class="profile-nav">
+      <ul>
+        <li class="active"><a href="#posts">Posts</a></li>
+        <li><a href="#media">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Feed -->
+  <main class="feed">
+    <!-- Repeating post items, replace image sources later -->
+    <article class="post">
+      <img src="post1.jpg" alt="Post Image">
+      <div class="post-content">
+        <p class="post-text">This is a sample caption for post #1. Replace with your content.</p>
+        <time datetime="2025-04-28">Apr 28, 2025</time>
+      </div>
+    </article>
+
+    <article class="post">
+      <img src="post2.jpg" alt="Post Image">
+      <div class="post-content">
+        <p class="post-text">Here’s another post entry! Swap out the image and text.</p>
+        <time datetime="2025-04-27">Apr 27, 2025</time>
+      </div>
+    </article>
+
+    <article class="post">
+      <img src="post3.jpg" alt="Post Image">
+      <div class="post-content">
+        <p class="post-text">Third post placeholder. Feel free to add more.</p>
+        <time datetime="2025-04-26">Apr 26, 2025</time>
+      </div>
+    </article>
+
+    <!-- Add more <article class="post"> blocks as needed -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Fun Feed</p>
+  </footer>
+</body>
+</html>
