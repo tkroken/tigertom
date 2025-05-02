@@ -30,7 +30,6 @@
     .profile-nav .active a { color: #1da1f2; }
     .feed { max-width: 600px; margin: 0 auto 40px; padding: 0 16px; }
     .post { background: #fff; margin-bottom: 16px; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    /* Ensure images maintain aspect ratio */
     .post img, .slide img { width: 100%; height: auto; display: block; }
     .post-content { padding: 12px; }
     .post-title { margin: 0 0 8px; font-size: 1.1rem; }
@@ -43,13 +42,32 @@
     .comment-area { margin-top: 12px; }
     .comment-area input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; }
 
-    /* Slider styles */
+    /* Slider styles with arrows */
+    .slider-container { position: relative; }
     .slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
     .slider::-webkit-scrollbar { display: none; }
     .slide { flex: 0 0 100%; scroll-snap-align: start; }
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .slider-arrow.left { left: 8px; }
+    .slider-arrow.right { right: 8px; }
 
     footer { text-align: center; padding: 16px 0; color: #777; font-size: 0.875rem; }
-    /* Responsive: mobile adjustments */
     @media (max-width: 600px) {
       .profile-info { flex-direction: column; text-align: center; margin-top: -30px; }
       .user-details { margin: 12px 0 0; }
@@ -58,14 +76,9 @@
   </style>
 </head>
 <body>
-  <!-- Profile Header -->
   <header class="profile-header">
-    <div class="logo-container">
-      <img src="of-logo.png" alt="OnlyFans Logo">
-    </div>
-    <div class="cover-photo">
-      <img src="IMG_4379.jpeg" alt="Cover Photo">
-    </div>
+    <div class="logo-container"><img src="of-logo.png" alt="OnlyFans Logo"></div>
+    <div class="cover-photo"><img src="IMG_4379.jpeg" alt="Cover Photo"></div>
     <div class="profile-info">
       <div class="avatar">
         <img src="IMG_8624.jpeg" alt="Avatar">
@@ -81,91 +94,93 @@
       <a href="https://qr.vipps.no/box/e7d514d3-97b8-404e-98f8-052a83f24835/pay-in" class="subscribe-btn">Subscribe now</a>
     </div>
     <div class="stats-bar">
-      <div class="stat-item">
-        <strong>10</strong>
-        <span>Posts</span>
-      </div>
-      <div class="stat-item">
-        <strong>69</strong>
-        <span>Followers</span>
-      </div>
-      <div class="stat-item">
-        <strong>4</strong>
-        <span>Following</span>
-      </div>
+      <div class="stat-item"><strong>10</strong><span>Posts</span></div>
+      <div class="stat-item"><strong>69</strong><span>Followers</span></div>
+      <div class="stat-item"><strong>4</strong><span>Following</span></div>
     </div>
     <nav class="profile-nav">
-      <ul>
-        <li class="active"><a href="#posts">Posts</a></li>
-        <li><a href="#media">Media</a></li>
-      </ul>
+      <ul><li class="active"><a href="#posts">Posts</a></li><li><a href="#media">Media</a></li></ul>
     </nav>
   </header>
 
-  <!-- Feed -->
   <main class="feed">
+    <!-- Post 1 -->
     <article class="post">
       <img src="IMG_6520.jpeg" alt="Feeding time never looked this good…">
       <div class="post-content">
         <h2 class="post-title">Feeding time never looked this good…</h2>
         <p class="post-text">While kitty laps up her dinner, I’m licking my lips behind the glass—can you blame me?</p>
         <p class="post-sub">Subscribe now for uncensored behind-the-scenes clips and intimate Q&amp;As</p>
-        <div class="post-meta">
-          <time datetime="2025-04-28">Apr 28, 2025</time>
-          <button class="like-btn">❤</button>
-        </div>
-        <div class="comment-area">
-          <input type="text" placeholder="Add a comment...">
-        </div>
+        <div class="post-meta"><time datetime="2025-04-28">Apr 28, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
       </div>
     </article>
 
+    <!-- Post 2 -->
     <article class="post">
-      <img src="IMG_6521.jpeg" alt="Caught in the act… just me and kitty, with a bag of her favorite Dreamies treats.">
+      <img src="IMG_6521.jpeg" alt="Caught in the act…">
       <div class="post-content">
         <h2 class="post-title">Caught in the act… just me and kitty, with a bag of her favorite Dreamies treats</h2>
         <p class="post-text">I’ve got my eyes on you—ready to trade cuddles for kisses? Slip under the velvet rope and watch as I turn snack time into a steamy playdate. 🔥😽</p>
         <p class="post-sub">Want more? Hit that subscribe button and unlock the full video of our purr-fectly naughty moment.</p>
-        <div class="post-meta">
-          <time datetime="2025-04-27">Apr 27, 2025</time>
-          <button class="like-btn">❤</button>
-        </div>
-        <div class="comment-area">
-          <input type="text" placeholder="Add a comment...">
-        </div>
+        <div class="post-meta"><time datetime="2025-04-27">Apr 27, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
       </div>
     </article>
 
+    <!-- Post 3 with slider -->
     <article class="post">
-      <!-- Slider: add your images below -->
-      <div class="slider">
-        <div class="slide"><img src="slide 1.jpg" alt="Slide 1"></div>
-        <div class="slide"><img src="slide 2.jpg" alt="Slide 2"></div>
-        <div class="slide"><img src="slide 3.jpg" alt="Slide 3"></div>
+      <div class="slider-container">
+        <button class="slider-arrow left">‹</button>
+        <div class="slider">
+          <div class="slide"><img src="slide 1.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="slide 2.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="slide 3.jpg" alt="Slide 3"></div>
+        </div>
+        <button class="slider-arrow right">›</button>
       </div>
       <div class="post-content">
         <h2 class="post-title">Third post placeholder.</h2>
         <p class="post-text">Feel free to add more.</p>
-        <div class="post-meta">
-          <time datetime="2025-04-26">Apr 26, 2025</time>
-          <button class="like-btn">❤</button>
+        <div class="post-meta"><time datetime="2025-04-26">Apr 26, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
+      </div>
+    </article>
+
+    <!-- Post 4 with slider -->
+    <article class="post">
+      <div class="slider-container">
+        <button class="slider-arrow left">‹</button>
+        <div class="slider">
+          <div class="slide"><img src="post 4 - slide 1.jpg" alt="Det er ikke bare vannet som skaper fuktighet…"></div>
+          <div class="slide"><img src="post 4 - slide 2.jpg" alt="Det er ikke bare vannet som skaper fuktighet…"></div>
         </div>
-        <div class="comment-area">
-          <input type="text" placeholder="Add a comment...">
-        </div>
+        <button class="slider-arrow right">›</button>
+      </div>
+      <div class="post-content">
+        <h2 class="post-title">Det er ikke bare vannet som skaper fuktighet…</h2>
+        <p class="post-text">Føl dampen stige – kan du høre hvordan det plasker av begjær? 😈💦</p>
+        <p class="post-sub">Vil du se hele showet? Abonner nå for full tilgang til mitt våteste øyeblikk!</p>
+        <div class="post-meta"><time datetime="2025-04-25">Apr 25, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
       </div>
     </article>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© Tigertom</p>
-  </footer>
+  <footer><p>© Tigertom</p></footer>
 
-  <!-- Like button script -->
   <script>
-    document.querySelectorAll('.like-btn').forEach(btn => {
-      btn.addEventListener('click', () => btn.classList.toggle('liked'));
+    // Like buttons
+    document.querySelectorAll('.like-btn').forEach(btn => btn.addEventListener('click', () => btn.classList.toggle('liked')));
+    // Slider arrows functionality
+    document.querySelectorAll('.slider-container').forEach(container => {
+      const slider = container.querySelector('.slider');
+      container.querySelector('.slider-arrow.left').addEventListener('click', () => {
+        slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+      });
+      container.querySelector('.slider-arrow.right').addEventListener('click', () => {
+        slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+      });
     });
   </script>
 </body>
