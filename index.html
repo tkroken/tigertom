@@ -80,10 +80,7 @@
     <div class="logo-container"><img src="of-logo.png" alt="OnlyFans Logo"></div>
     <div class="cover-photo"><img src="IMG_4379.jpeg" alt="Cover Photo"></div>
     <div class="profile-info">
-      <div class="avatar">
-        <img src="IMG_8624.jpeg" alt="Avatar">
-        <p class="onlyfans">OnlyFans Verified</p>
-      </div>
+      <div class="avatar"><img src="IMG_8624.jpeg" alt="Avatar"><p class="onlyfans">OnlyFans Verified</p></div>
       <div class="user-details">
         <h1>Tigertom <span class="verified">✔️</span></h1>
         <p class="username">@tigertom</p>
@@ -93,14 +90,8 @@
       </div>
       <a href="https://qr.vipps.no/box/e7d514d3-97b8-404e-98f8-052a83f24835/pay-in" class="subscribe-btn">Subscribe now</a>
     </div>
-    <div class="stats-bar">
-      <div class="stat-item"><strong>10</strong><span>Posts</span></div>
-      <div class="stat-item"><strong>69</strong><span>Followers</span></div>
-      <div class="stat-item"><strong>4</strong><span>Following</span></div>
-    </div>
-    <nav class="profile-nav">
-      <ul><li class="active"><a href="#posts">Posts</a></li><li><a href="#media">Media</a></li></ul>
-    </nav>
+    <div class="stats-bar"><div class="stat-item"><strong>10</strong><span>Posts</span></div><div class="stat-item"><strong>69</strong><span>Followers</span></div><div class="stat-item"><strong>4</strong><span>Following</span></div></div>
+    <nav class="profile-nav"><ul><li class="active"><a href="#posts">Posts</a></li><li><a href="#media">Media</a></li></ul></nav>
   </header>
 
   <main class="feed">
@@ -112,6 +103,24 @@
         <p class="post-text">While kitty laps up her dinner, I’m licking my lips behind the glass—can you blame me?</p>
         <p class="post-sub">Subscribe now for uncensored behind-the-scenes clips and intimate Q&amp;As</p>
         <div class="post-meta"><time datetime="2025-04-28">Apr 28, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
+      </div>
+    </article>
+
+    <!-- Post 5 (now number 2) -->
+    <article class="post">
+      <div class="slider-container">
+        <button class="slider-arrow left">‹</button>
+        <div class="slider">
+          <div class="slide"><img src="post 5 - slide 1.jpg" alt="Vi erter hverandre, hehe… Sjekk tungen!"></div>
+          <div class="slide"><img src="post 5 - slide 2.jpg" alt="Vi erter hverandre, hehe… Sjekk tungen!"></div>
+        </div>
+        <button class="slider-arrow right">›</button>
+      </div>
+      <div class="post-content">
+        <h2 class="post-title">Vi jager hverandre, og når hun stikker ut tungen sin for en liten “smaksprøve”, kan jeg ikke dy meg – jeg må følge etter.</h2>
+        <p class="post-text">Vi erter hverandre, hehe… Sjekk tungen!</p>
+        <div class="post-meta"><time datetime="2025-04-24">Apr 24, 2025</time><button class="like-btn">❤</button></div>
         <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
       </div>
     </article>
@@ -147,22 +156,21 @@
       </div>
     </article>
 
-    $1
-
-    <!-- Post 5 with slider -->
+    <!-- Post 4 with slider -->
     <article class="post">
       <div class="slider-container">
         <button class="slider-arrow left">‹</button>
         <div class="slider">
-          <div class="slide"><img src="post 5 - slide 1.jpg" alt="Vi erter hverandre, hehe… Sjekk tungen!"></div>
-          <div class="slide"><img src="post 5 - slide 2.jpg" alt="Vi erter hverandre, hehe… Sjekk tungen!"></div>
+          <div class="slide"><img src="post 4 - slide 1.jpg" alt="Det er ikke bare vannet som skaper fuktighet…"></div>
+          <div class="slide"><img src="post 4 - slide 2.jpg" alt="Det er ikke bare vannet som skaper fuktighet…"></div>
         </div>
         <button class="slider-arrow right">›</button>
       </div>
       <div class="post-content">
-        <h2 class="post-title">Vi jager hverandre, og når hun stikker ut tungen sin for en liten “smaksprøve”, kan jeg ikke dy meg – jeg må følge etter.</h2>
-        <p class="post-text">Vi erter hverandre, hehe… Sjekk tungen!</p>
-        <div class="post-meta"><time datetime="2025-04-24">Apr 24, 2025</time><button class="like-btn">❤</button></div>
+        <h2 class="post-title">Det er ikke bare vannet som skaper fuktighet…</h2>
+        <p class="post-text">Føl dampen stige – kan du høre hvordan det plasker av begjær? 😈💦</p>
+        <p class="post-sub">Vil du se hele showet? Abonner nå for full tilgang til mitt våteste øyeblikk!</p>
+        <div class="post-meta"><time datetime="2025-04-25">Apr 25, 2025</time><button class="like-btn">❤</button></div>
         <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
       </div>
     </article>
@@ -176,12 +184,8 @@
     // Slider arrows functionality
     document.querySelectorAll('.slider-container').forEach(container => {
       const slider = container.querySelector('.slider');
-      container.querySelector('.slider-arrow.left').addEventListener('click', () => {
-        slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
-      });
-      container.querySelector('.slider-arrow.right').addEventListener('click', () => {
-        slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
-      });
+      container.querySelector('.slider-arrow.left').addEventListener('click', () => slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' }));
+      container.querySelector('.slider-arrow.right').addEventListener('click', () => slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' }));
     });
   </script>
 </body>
