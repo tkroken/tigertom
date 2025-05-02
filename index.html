@@ -41,38 +41,15 @@
     time { color: #777; font-size: 0.875rem; }
     .comment-area { margin-top: 12px; }
     .comment-area input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; }
-
-    /* Slider styles with arrows */
     .slider-container { position: relative; }
     .slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
     .slider::-webkit-scrollbar { display: none; }
     .slide { flex: 0 0 100%; scroll-snap-align: start; }
-    .slider-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.3);
-      border: none;
-      color: #fff;
-      font-size: 2rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1;
-    }
+    .slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; color: #fff; font-size: 2rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 1; }
     .slider-arrow.left { left: 8px; }
     .slider-arrow.right { right: 8px; }
-
     footer { text-align: center; padding: 16px 0; color: #777; font-size: 0.875rem; }
-    @media (max-width: 600px) {
-      .profile-info { flex-direction: column; text-align: center; margin-top: -30px; }
-      .user-details { margin: 12px 0 0; }
-      .subscribe-btn { margin: 16px 0 0; width: 80%; }
-    }
+    @media (max-width: 600px) { .profile-info { flex-direction: column; text-align: center; margin-top: -30px; } .user-details { margin: 12px 0 0; } .subscribe-btn { margin: 16px 0 0; width: 80%; } }
   </style>
 </head>
 <body>
@@ -94,24 +71,12 @@
       <div class="stat-item"><strong>5</strong><span>Posts</span></div>
       <div class="stat-item"><strong>69</strong><span>Followers</span></div>
       <div class="stat-item"><strong>4</strong><span>Following</span></div>
-    </div><div class="stat-item"><strong>69</strong><span>Followers</span></div><div class="stat-item"><strong>4</strong><span>Following</span></div></div>
+    </div>
     <nav class="profile-nav"><ul><li class="active"><a href="#posts">Posts</a></li><li><a href="#media">Media</a></li></ul></nav>
   </header>
 
   <main class="feed">
-    <!-- Post 1 -->
-    <article class="post">
-      <img src="IMG_6520.jpeg" alt="Feeding time never looked this good…">
-      <div class="post-content">
-        <h2 class="post-title">Feeding time never looked this good…</h2>
-        <p class="post-text">While kitty laps up her dinner, I’m licking my lips behind the glass—can you blame me?</p>
-        <p class="post-sub">Subscribe now for uncensored behind-the-scenes clips and intimate Q&amp;As</p>
-        <div class="post-meta"><time datetime="2025-04-28">Apr 28, 2025</time><button class="like-btn">❤</button></div>
-        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
-      </div>
-    </article>
-
-    <!-- Post 5 (now number 2) -->
+    <!-- Post 5 -->
     <article class="post">
       <div class="slider-container">
         <button class="slider-arrow left">‹</button>
@@ -129,19 +94,7 @@
       </div>
     </article>
 
-    <!-- Post 2 -->
-    <article class="post">
-      <img src="IMG_6521.jpeg" alt="Caught in the act…">
-      <div class="post-content">
-        <h2 class="post-title">Caught in the act… just me and kitty, with a bag of her favorite Dreamies treats</h2>
-        <p class="post-text">I’ve got my eyes on you—ready to trade cuddles for kisses? Slip under the velvet rope and watch as I turn snack time into a steamy playdate. 🔥😽</p>
-        <p class="post-sub">Want more? Hit that subscribe button and unlock the full video of our purr-fectly naughty moment.</p>
-        <div class="post-meta"><time datetime="2025-04-27">Apr 27, 2025</time><button class="like-btn">❤</button></div>
-        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
-      </div>
-    </article>
-
-    <!-- Post 3 with slider -->
+    <!-- Post 3 -->
     <article class="post">
       <div class="slider-container">
         <button class="slider-arrow left">‹</button>
@@ -160,7 +113,7 @@
       </div>
     </article>
 
-    <!-- Post 4 with slider -->
+    <!-- Post 4 -->
     <article class="post">
       <div class="slider-container">
         <button class="slider-arrow left">‹</button>
@@ -175,6 +128,30 @@
         <p class="post-text">Føl dampen stige – kan du høre hvordan det plasker av begjær? 😈💦</p>
         <p class="post-sub">Vil du se hele showet? Abonner nå for full tilgang til mitt våteste øyeblikk!</p>
         <div class="post-meta"><time datetime="2025-04-25">Apr 25, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
+      </div>
+    </article>
+
+    <!-- Post 1 -->
+    <article class="post">
+      <img src="IMG_6520.jpeg" alt="Feeding time never looked this good…">
+      <div class="post-content">
+        <h2 class="post-title">Feeding time never looked this good…</h2>
+        <p class="post-text">While kitty laps up her dinner, I’m licking my lips behind the glass—can you blame me?</p>
+        <p class="post-sub">Subscribe now for uncensored behind-the-scenes clips and intimate Q&amp;As</p>
+        <div class="post-meta"><time datetime="2025-04-28">Apr 28, 2025</time><button class="like-btn">❤</button></div>
+        <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
+      </div>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="post">
+      <img src="IMG_6521.jpeg" alt="Caught in the act…">
+      <div class="post-content">
+        <h2 class="post-title">Caught in the act… just me and kitty, with a bag of her favorite Dreamies treats</h2>
+        <p class="post-text">I’ve got my eyes on you—ready to trade cuddles for kisses? Slip under the velvet rope and watch as I turn snack time into a steamy playdate. 🔥😽</p>
+        <p class="post-sub">Want more? Hit that subscribe button and unlock the full video of our purr-fectly naughty moment.</p>
+        <div class="post-meta"><time datetime="2025-04-27">Apr 27, 2025</time><button class="like-btn">❤</button></div>
         <div class="comment-area"><input type="text" placeholder="Add a comment..."></div>
       </div>
     </article>
